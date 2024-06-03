@@ -20,7 +20,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: prfj/my-repo
+          images: prfj/vcluster-import-secrets
           tags: |
             type=ref,event=branch
             type=ref,event=pr
