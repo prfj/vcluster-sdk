@@ -1,12 +1,13 @@
 name: ci
 
 on:
-  push:
-    branches:
-      - "**"
+  pull_request:
     paths:
     - examples/import-secrets/**
     - .github/**
+  push:
+    branches:
+      - 'main'
 
 jobs:
   docker:
@@ -18,7 +19,8 @@ jobs:
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@v5
-        with:     
+        with:
+          images: prfj/my-repo
           tags: |
             type=ref,event=branch
             type=ref,event=pr
