@@ -24,7 +24,7 @@ jobs:
       - name: Run Hadolint
         working-directory: examples/import-secrets/
         run: |
-          hadolint < cat Dockerfile
+          hadolint Dockerfile
 
       - name: Docker meta
         id: meta
