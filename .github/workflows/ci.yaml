@@ -6,6 +6,7 @@ on:
       - "**"
     paths:
     - examples/import-secrets/**
+    - .github/**
 
 jobs:
   docker:
