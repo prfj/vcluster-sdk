@@ -2,7 +2,7 @@
 FROM golang:1.22.2 as builder
 
 # Make sure we use go modules
-WORKDIR vcluster
+WORKDIR /vcluster
 
 # Copy the Go Modules manifests
 COPY . .
