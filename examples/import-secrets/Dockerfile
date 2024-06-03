@@ -14,7 +14,7 @@ RUN go mod vendor
 RUN CGO_ENABLED=0 GO111MODULE=on go build -mod vendor -o /plugin main.go
 
 # we use alpine for easier debugging
-FROM alpine
+FROM alpine:3.20.0
 
 # Set root path as working directory
 WORKDIR /
